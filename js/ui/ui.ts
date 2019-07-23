@@ -103,7 +103,7 @@ namespace ui {
     var radiob2 = svg_main.append("g");
     radiob2.attr("transform", "translate(50, 580)").RadioButton(30);
 
-    let url = "js/data/actual.json";
+    let url = "public/js/data/actual.json";
     let parametro = "nombre";
 
     let drop = svg_main.append("g");

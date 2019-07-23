@@ -85,7 +85,7 @@ var ui;
         radiob.attr("transform", "translate(50, 540)").RadioButton(30);
         var radiob2 = ui.svg_main.append("g");
         radiob2.attr("transform", "translate(50, 580)").RadioButton(30);
-        let url = "js/data/actual.json";
+        let url = "public/js/data/actual.json";
         let parametro = "nombre";
         let drop = ui.svg_main.append("g");
         drop.attr("transform", "translate(20,50)").dropdown(url, parametro);
