@@ -4,5 +4,7 @@ namespace main {
 
   export function ini() {
     console.log("iniciando", appName, Vernumber);
+    ui.alignment.ini();
+    ui.ini();
   }
 }
