@@ -1,0 +1,23 @@
+{
+  "name": "jorgemex.github.io",
+  "version": "1.0.0",
+  "description": "ejercicios",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgemex/jorgemex.github.io.git"
+  },
+  "author": "Jorge Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorgemex/jorgemex.github.io/issues"
+  },
+  "homepage": "https://github.com/jorgemex/jorgemex.github.io#readme",
+  "dependencies": {
+    "@types/d3": "^5.7.2",
+    "@types/systemjs": "^0.20.6"
+  }
+}
