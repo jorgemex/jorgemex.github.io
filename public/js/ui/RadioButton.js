@@ -19,7 +19,7 @@ var ui;
                 .style("stroke", "black");
             var mark = g
                 .append("circle")
-                .attr("r", size / 3)
+                .attr("r", size / 3.6)
                 .style("stroke-width", markStrokeWidth)
                 .style("stroke", "black")
                 .attr("fill", "black")
