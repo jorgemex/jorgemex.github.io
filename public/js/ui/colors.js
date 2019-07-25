@@ -8,6 +8,7 @@ var ui;
         colors.verde = "#1bbf4c";
         colors.blanco = "white";
         colors.gris = "#d3d3d3";
+        colors.negro = "black";
     })(colors = ui.colors || (ui.colors = {}));
 })(ui || (ui = {}));
 // let textfiel = sboton.append("g")

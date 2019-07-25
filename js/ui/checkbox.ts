@@ -1,6 +1,6 @@
 namespace ui {
   export namespace checkbox {
-    export function crea(size: any) {
+    export function crea(size: any, colorcheck: any, stroke: any) {
       let gChecked = this as d3.Selection<any, any, any, any>;
       gChecked.property("value", false);
       let x = 0,
@@ -12,18 +12,17 @@ namespace ui {
         checked = false,
         clickEvent;
 
-      var g = gChecked.append("g"),
-        box = g
-          .append("rect")
-          .attr("width", size)
-          .attr("height", size)
-          .attr("x", x)
-          .attr("y", y)
-          .attr("rx", rx)
-          .attr("ry", ry)
-          .style("fill-opacity", 0)
-          .style("stroke-width", boxStrokeWidth)
-          .style("stroke", "black");
+      var g = gChecked.classed("checkbox", true);
+      g.append("rect")
+        .attr("width", size)
+        .attr("height", size)
+        .attr("x", x)
+        .attr("y", y)
+        .attr("rx", rx)
+        .attr("ry", ry)
+        .style("fill-opacity", 0)
+        .style("stroke-width", boxStrokeWidth)
+        .style("stroke", stroke);
 
       //Data to represent the check mark
       var coordinates = [
@@ -46,7 +45,7 @@ namespace ui {
         .append("path")
         .attr("d", line(coordinates))
         .style("stroke-width", markStrokeWidth)
-        .style("stroke", "black")
+        .style("stroke", colorcheck)
         .style("fill", "none")
         .style("opacity", checked ? 1 : 0);
 

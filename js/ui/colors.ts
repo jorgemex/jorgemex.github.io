@@ -6,6 +6,7 @@ namespace ui {
     export const verde = "#1bbf4c";
     export const blanco = "white";
     export const gris = "#d3d3d3";
+    export const negro = "black";
   }
 }
 

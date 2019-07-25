@@ -18,7 +18,7 @@ var ui;
         let diaog = ui.svg_main.append("g");
         let insBton = ui.svg_main
             .append("g")
-            .attr("transform", "translate(70,320)")
+            .attr("transform", "translate(70,450)")
             .classed("boton", true)
             .on("click", function () {
             let val = document.getElementById("msg").value;
@@ -30,7 +30,7 @@ var ui;
             .boton("Boton", "green", ui.colors.verde);
         let sboton = ui.svg_main
             .append("g")
-            .attr("transform", "translate(230,320)")
+            .attr("transform", "translate(230,450)")
             .on("click", function () {
             let sw1 = swi.valswitch();
             let sw2 = swi2.valswitch();
@@ -67,24 +67,27 @@ var ui;
         //let a = d3.select("id").property("value");
         let swi = ui.svg_main.append("g");
         swi.classed("swi1", true);
-        swi.attr("transform", "translate(150,450)").dswitch(70);
+        swi.attr("transform", "translate(250,510)").dswitch(70);
         swi.attr("id", "swi1");
         let swi2 = ui.svg_main
             .append("g")
             .classed("swi2", true)
-            .attr("transform", "translate(150, 500)");
+            .attr("transform", "translate(250, 550)");
         swi2.dswitch(70);
         let dro = ui.svg_main.append("g");
-        dro.attr("transform", "translate(150, 520)");
-        dro.drop();
+        dro.attr("transform", "translate(150, 520)").drop();
         var checkbox = ui.svg_main.append("g");
-        checkbox.attr("transform", "translate(50,450)").checkbox(30);
+        checkbox
+            .attr("transform", "translate(100,510)")
+            .checkbox(30, ui.colors.rojo, ui.colors.negro);
         var checkbox1 = ui.svg_main.append("g");
-        checkbox1.attr("transform", "translate(50,490)").checkbox(30);
+        checkbox1
+            .attr("transform", "translate(100,550)")
+            .checkbox(30, ui.colors.verde, ui.colors.negro);
         var radiob = ui.svg_main.append("g");
-        radiob.attr("transform", "translate(50, 540)").RadioButton(30);
+        radiob.attr("transform", "translate(50, 510)").RadioButton(30);
         var radiob2 = ui.svg_main.append("g");
-        radiob2.attr("transform", "translate(50, 580)").RadioButton(30);
+        radiob2.attr("transform", "translate(50, 550)").RadioButton(30);
         let url = "public/js/data/actual.json";
         let parametro = "nombre";
         let drop = ui.svg_main.append("g");

@@ -2,12 +2,12 @@ var ui;
 (function (ui) {
     let checkbox;
     (function (checkbox) {
-        function crea(size) {
+        function crea(size, colorcheck, stroke) {
             let gChecked = this;
             gChecked.property("value", false);
             let x = 0, y = 0, rx = size / 4, ry = size / 4, markStrokeWidth = 4, boxStrokeWidth = 2, checked = false, clickEvent;
-            var g = gChecked.append("g"), box = g
-                .append("rect")
+            var g = gChecked.classed("checkbox", true);
+            g.append("rect")
                 .attr("width", size)
                 .attr("height", size)
                 .attr("x", x)
@@ -16,7 +16,7 @@ var ui;
                 .attr("ry", ry)
                 .style("fill-opacity", 0)
                 .style("stroke-width", boxStrokeWidth)
-                .style("stroke", "black");
+                .style("stroke", stroke);
             //Data to represent the check mark
             var coordinates = [
                 { x: x + size / 4, y: y + size / 2 },
@@ -35,7 +35,7 @@ var ui;
                 .append("path")
                 .attr("d", line(coordinates))
                 .style("stroke-width", markStrokeWidth)
-                .style("stroke", "black")
+                .style("stroke", colorcheck)
                 .style("fill", "none")
                 .style("opacity", checked ? 1 : 0);
             g.on("click", () => {

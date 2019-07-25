@@ -33,7 +33,7 @@ namespace ui {
       _clip
         .append("rect")
         .attr("width", 366)
-        .attr("height", 256)
+        .attr("height", 456)
         .attr("x", 0)
         .attr("y", 0);
       dropdw.on("click", function() {});
@@ -43,35 +43,48 @@ namespace ui {
         .append("rect")
         .attr("clip-path", "url(#clip-ventana)")
         .attr("width", 360)
-        .attr("height", 250)
+        .attr("height", 390)
         .attr("ry", 10)
         .attr("fill", "#262626")
         .attr("stroke-width", 1)
 
         .attr("stroke", "white");
       let info = rect.append("g");
+      let def = info.append("defs");
+      let clip = def.append("clipPath").attr("id", "clip-ventana2");
+      clip
+        .append("rect")
+        .attr("width", 366)
+        .attr("height", 256)
+        .attr("x", 0)
+        .attr("y", 0);
 
       d3.json(url).then(function(data: any) {
         var dats;
+        let size = 50;
         for (var i = 0; i < data.length; i++) {
           dats = data[i][parametro];
-          info
-            .append("rect")
+
+          let re = info.append("g");
+          re.append("rect")
             .attr("width", 340)
-            .attr("clip-path", "url(#clip-ventana)")
-            .attr("height", 30)
+            .attr("height", size)
             .attr("fill", "none")
-
-            .attr("stroke-width", 0.1)
+            .attr("stroke-width", 0)
             .attr("stroke", "green")
-            .attr("transform", "translate(10," + (10 + i * 30) + ")");
+            .attr("transform", "translate(10," + (size / 2.5 + i * 30) + ")");
 
-          info
+          let re2 = re.append("g");
+          re2
+            .attr("transform", "translate(13," + (size / 2 + i * 30) + ")")
+            .checkbox(20, colors.amarillo, colors.blanco);
+
+          let text = re.append("g");
+          text
             .append("text")
-            .attr("clip-path", "url(#clip-ventana)")
             .text(dats)
-            .attr("x", 30)
-            .attr("y", 30 + i * 30)
+            .attr("x", size / 1)
+            .attr("y", size / 1.4 + i * 30)
             .style("fill", "white")
             .style("font-size", "18")
             // .on("touchstart", touch)
@@ -80,7 +93,7 @@ namespace ui {
             .style("fotn-weight", "bold");
         }
       });
-      dragScroll(info);
+      //dragScroll(info);
       function getTrain() {}
     }
   }
