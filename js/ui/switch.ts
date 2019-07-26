@@ -13,7 +13,7 @@ namespace ui {
         clickEvent;
 
       var g = gSwitch.append("g"),
-        box = g
+        caja = g
           .append("rect")
           .attr("width", size)
           .attr("height", size / 2)
@@ -37,13 +37,12 @@ namespace ui {
 
       mark.on("click", () => {
         checked = !checked;
-        if (checked == true) {
-          mark.attr("cx", size / 1.33).attr("cy", size / 4);
-          box.attr("fill", "#64bd63");
-        } else {
-          mark.attr("cx", size / 4).attr("cy", size / 4);
-          box.attr("fill", "#d3d3d3");
-        }
+        checked == true
+          ? (mark.attr("cx", size / 1.33).attr("cy", size / 4),
+            caja.attr("fill", "#64bd63"))
+          : (mark.attr("cx", size / 4).attr("cy", size / 4),
+            caja.attr("fill", "#d3d3d3"));
+
         gSwitch.property("value", checked);
         if (clickEvent) clickEvent();
         d3.event.stopPropagation();

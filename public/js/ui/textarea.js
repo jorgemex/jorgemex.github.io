@@ -7,9 +7,12 @@ var ui;
         function crea() {
             let gCajatexto = this;
             gCajatexto.classed("gtextarea", true);
-            if (gCajatexto.property("id") !== undefined) {
-                id = gCajatexto.property("id");
-            }
+            gCajatexto.property("id") !== undefined
+                ? (id = gCajatexto.property("id"))
+                : "";
+            // if (gCajatexto.property("id") !== undefined) {
+            //   id = gCajatexto.property("id");
+            // }
             let textarea = '<textarea rows="18" cols="30" style="margin: 0px; width: 200px; height: 140px;">TEXTAREA</textarea>';
             rect = gCajatexto.append("g");
             rect

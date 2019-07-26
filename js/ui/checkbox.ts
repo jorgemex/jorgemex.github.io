@@ -52,7 +52,6 @@ namespace ui {
       g.on("click", () => {
         checked = !checked;
         mark.style("opacity", checked ? 1 : 0);
-
         gChecked.property("value", checked);
         if (clickEvent) clickEvent();
         d3.event.stopPropagation();
