@@ -33,7 +33,7 @@ namespace ui {
       _clip
         .append("rect")
         .attr("width", 366)
-        .attr("height", 456)
+        .attr("height", 356)
         .attr("x", 0)
         .attr("y", 0);
       dropdw.on("click", function() {});
@@ -43,7 +43,7 @@ namespace ui {
         .append("rect")
         .attr("clip-path", "url(#clip-ventana)")
         .attr("width", 360)
-        .attr("height", 390)
+        .attr("height", 290)
         .attr("ry", 10)
         .attr("fill", "#262626")
         .attr("stroke-width", 1)
