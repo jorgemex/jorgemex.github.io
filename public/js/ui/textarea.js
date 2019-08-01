@@ -20,6 +20,7 @@ var ui;
                 .attr("id", id)
                 .attr("width", 200)
                 .attr("height", 140)
+                //
                 .html(textarea);
         }
         texatarea.crea = crea;

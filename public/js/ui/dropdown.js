@@ -79,6 +79,9 @@ var ui;
                         .attr("y", size / 1.4 + i * 30)
                         .style("fill", "white")
                         .style("font-size", "18")
+                        // .on("touchstart", touch)
+                        // .on("touchmove", touch)
+                        // .on("touchend", touch)
                         .style("fotn-weight", "bold");
                 }
             });

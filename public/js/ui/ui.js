@@ -27,6 +27,7 @@ var ui;
                 .property("text", val)
                 .dialogs();
         })
+            //texto del boton, color borde, color del boton
             .boton("Boton", "green", ui.colors.gris);
         let toast = ui.svg_main.append("g");
         let sboton = ui.svg_main
@@ -37,6 +38,7 @@ var ui;
                 .attr("transform", "translate(45,610)")
                 .property("text", "El primer Switch esta en: " + swi.valswitch())
                 .toast();
+            console.log(swi.valswitch());
         })
             .boton("Boton", "green", ui.colors.verde);
         let rect = ui.svg_main

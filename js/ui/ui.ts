@@ -21,7 +21,7 @@ namespace ui {
       .append("g")
       .attr("transform", "translate(70,470)")
       .classed("boton", true)
-      .on("click", function() {
+      .on("click", function () {
         let val = (<HTMLInputElement>document.getElementById("msg")).value;
 
         diaog
@@ -35,11 +35,12 @@ namespace ui {
     let sboton = svg_main
       .append("g")
       .attr("transform", "translate(230,470)")
-      .on("click", function() {
+      .on("click", function () {
         toast
           .attr("transform", "translate(45,610)")
           .property("text", "El primer Switch esta en: " + swi.valswitch())
           .toast();
+        console.log(swi.valswitch())
       })
       .boton("Boton", "green", colors.verde);
 

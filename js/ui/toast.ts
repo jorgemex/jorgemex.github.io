@@ -32,7 +32,7 @@ namespace ui {
         .attr("x", width / 8)
         .attr("y", height / 1.8);
 
-      setInterval(function() {
+      setInterval(function () {
         rect
           .transition()
           .duration(2000)
