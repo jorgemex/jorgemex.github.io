@@ -13,7 +13,7 @@ namespace ui {
         clickEvent;
 
       var g = gSwitch.append("g"),
-        caja = g
+        box = g
           .append("rect")
           .attr("width", size)
           .attr("height", size / 2)
@@ -28,20 +28,36 @@ namespace ui {
 
       var mark = g
         .append("circle")
-        .attr("r", size / 4.2)
+        .attr("r", size / 4.6)
         .style("stroke-width", markStrokeWidth)
         .style("stroke", "black")
+
         .attr("fill", "white")
         .attr("cx", size / 4)
-        .attr("cy", size / 4);
+        .attr("cy", size / 4)
+        .style("box-shadow", "8px 8px 0px #aaa;");
 
       mark.on("click", () => {
         checked = !checked;
         checked == true
-          ? (mark.attr("cx", size / 1.33).attr("cy", size / 4),
-            caja.attr("fill", "#64bd63"))
-          : (mark.attr("cx", size / 4).attr("cy", size / 4),
-            caja.attr("fill", "#d3d3d3"));
+          ? (mark
+              .transition()
+              .duration(290)
+              .attr("cx", size / 1.33)
+              .attr("cy", size / 4),
+            box
+              .transition()
+              .duration(500)
+              .attr("fill", "#64bd63"))
+          : (mark
+              .transition()
+              .duration(290)
+              .attr("cx", size / 4)
+              .attr("cy", size / 4),
+            box
+              .transition()
+              .duration(500)
+              .attr("fill", "#d3d3d3"));
 
         gSwitch.property("value", checked);
         if (clickEvent) clickEvent();

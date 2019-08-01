@@ -139,7 +139,7 @@ namespace ui {
         //_gbtn1.append("text").text("<").attr("font-size", 10).attr("font-family", "serif").attr("font-family", "Helvetica").attr("fill", "#000").attr("font-weight", "bold");
         _gbtn1
           .append("image")
-          .attr("xlink:href", "images/right-back.png")
+          .attr("xlink:href", "public/images/right-back.png")
           .attr("width", "16px")
           .attr("height", "16px")
           .style("cursor", "pointer");
@@ -163,7 +163,7 @@ namespace ui {
         // _gbtn2.append("text").text(">").attr("font-size", 10).attr("font-family", "serif").attr("font-family", "Helvetica").attr("fill", "#000").attr("font-weight", "bold");
         _gbtn2
           .append("image")
-          .attr("xlink:href", "images/right-next.png")
+          .attr("xlink:href", "public/images/right-next.png")
           .attr("width", "16px")
           .attr("height", "16px")
           .style("cursor", "pointer");

@@ -25,35 +25,21 @@ namespace ui {
         let val = (<HTMLInputElement>document.getElementById("msg")).value;
 
         diaog
-          .attr("transform", "translate(45,470)")
+          .attr("transform", "translate(45, 450)")
           .property("text", val)
           .dialogs();
       })
       //texto del boton, color borde, color del boton
       .boton("Boton", "green", colors.gris);
-
+    let toast = svg_main.append("g");
     let sboton = svg_main
       .append("g")
       .attr("transform", "translate(230,470)")
       .on("click", function() {
-        alert("kakak pok");
-        let sw1 = swi.valswitch();
-        let sw2 = swi2.valswitch();
-        let ch = checkbox.property("value");
-        let ch2 = checkbox1.property("value");
-
-        console.log("sw1", swi.property("value"));
-        console.log("sw2", swi2.property("value"));
-        console.log("check", ch);
-        console.log("check2", ch2);
-        console.log("radio ", radiob.valRadioButton());
-        console.log("radio 2 ", radiob2.valRadioButton());
-        alert("El switch esta en" + sw1);
-        // if (sw1 == true) {
-        //   console.log("entro a true");
-        // } else {
-        //   console.log("val esta en: " + sw1);
-        // }
+        toast
+          .attr("transform", "translate(45,610)")
+          .property("text", "El primer Switch esta en: " + swi.valswitch())
+          .toast();
       })
       .boton("Boton", "green", colors.verde);
 
